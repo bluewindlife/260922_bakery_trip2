@@ -846,6 +846,10 @@ main {
   object-fit: cover;
 }
 
+.gallery img.image-position-left {
+  object-position: left center;
+}
+
 .gallery figcaption,
 .candidate-card figcaption,
 .truffle-layout figcaption {
@@ -976,6 +980,12 @@ main {
   content: "";
 }
 
+.parking-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
 .availability-list {
   list-style: none;
   padding: 0 !important;
@@ -1086,6 +1096,46 @@ main {
   border-radius: var(--radius);
   background: linear-gradient(145deg, #fff9f0, #fff);
   box-shadow: var(--shadow-small);
+}
+
+.backup-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.backup-card--kiso {
+  border-color: rgba(69, 102, 79, 0.3);
+  background: linear-gradient(145deg, #f7fcf8, #fff);
+}
+
+.backup-card__image {
+  margin: 0 0 20px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--cream);
+}
+
+.backup-card__image img {
+  aspect-ratio: 16 / 9;
+  background: var(--cream-deep);
+  object-fit: cover;
+}
+
+.backup-card__image figcaption {
+  padding: 11px 12px 12px;
+  color: var(--muted);
+  font-size: 0.7rem;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+.backup-card__image figcaption strong {
+  color: var(--ink);
+}
+
+.backup-card__image figcaption a {
+  font-weight: 700;
 }
 
 .backup-card h3 {

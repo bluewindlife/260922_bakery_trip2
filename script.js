@@ -1,8 +1,8 @@
 (() => {
   'use strict';
 
-  const VISIT_KEY = 'aichi-bakery-trip-20260922-visits-v2';
-  const CHECKLIST_KEY = 'aichi-bakery-trip-20260922-checklist-v2';
+  const VISIT_KEY = 'aichi-bakery-trip-20260922-visits-v3';
+  const CHECKLIST_KEY = 'aichi-bakery-trip-20260922-checklist-v3';
 
   const visitInputs = Array.from(document.querySelectorAll('[data-visit]'));
   const checklistInputs = Array.from(document.querySelectorAll('.checklist input[type="checkbox"]'));
