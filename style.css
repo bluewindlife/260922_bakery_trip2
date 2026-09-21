@@ -503,6 +503,41 @@ main {
   margin: 13px 0 0;
 }
 
+.vehicle-note {
+  display: grid;
+  grid-template-columns: minmax(190px, 0.7fr) minmax(0, 1.3fr);
+  gap: 18px 28px;
+  align-items: center;
+  margin-top: 16px;
+  padding: 22px 23px;
+  border: 1px solid rgba(49, 95, 105, 0.2);
+  border-radius: var(--radius-small);
+  background: #eef5f6;
+}
+
+.vehicle-note__label {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--blue);
+  font-size: 0.67rem;
+  font-weight: 900;
+  letter-spacing: 0.11em;
+}
+
+.vehicle-note h3,
+.vehicle-note p {
+  margin: 0;
+}
+
+.vehicle-note h3 {
+  font-size: 1rem;
+}
+
+.vehicle-note p {
+  color: #4a5b5f;
+  font-size: 0.83rem;
+}
+
 .status-chip {
   display: inline-flex;
   align-items: center;
@@ -865,6 +900,82 @@ main {
   font-size: 0.85rem;
 }
 
+.parking-box {
+  margin: 20px 0 0;
+  padding: 18px 19px;
+  border: 1px solid rgba(49, 95, 105, 0.22);
+  border-radius: var(--radius-small);
+  background: #f1f7f7;
+}
+
+.parking-box--live {
+  border-color: rgba(69, 102, 79, 0.3);
+  background: #f2f8f3;
+}
+
+.parking-box--onsite {
+  border-color: rgba(213, 138, 48, 0.26);
+  background: #fff9ec;
+}
+
+.parking-box--compact {
+  margin-top: 16px;
+  padding: 15px 16px;
+}
+
+.parking-box__heading {
+  display: grid;
+  gap: 3px;
+}
+
+.parking-box__heading span {
+  color: var(--blue);
+  font-size: 0.65rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.parking-box__heading strong {
+  color: var(--ink);
+  font-size: 0.94rem;
+}
+
+.parking-box ul {
+  margin: 10px 0 0;
+  padding-left: 1.25em;
+}
+
+.parking-box li {
+  margin: 4px 0;
+  color: #4c5554;
+  font-size: 0.79rem;
+}
+
+.parking-live-link {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  margin-top: 12px;
+  padding: 8px 13px;
+  border: 1px solid rgba(69, 102, 79, 0.35);
+  border-radius: 999px;
+  background: var(--white);
+  color: #2f583d;
+  font-size: 0.77rem;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.parking-live-link::before {
+  width: 8px;
+  height: 8px;
+  margin-right: 7px;
+  border-radius: 50%;
+  background: #4f805f;
+  box-shadow: 0 0 0 4px rgba(79, 128, 95, 0.12);
+  content: "";
+}
+
 .availability-list {
   list-style: none;
   padding: 0 !important;
@@ -918,6 +1029,13 @@ main {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
+}
+
+.section-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -12px;
+  margin-bottom: 18px;
 }
 
 .candidate-card {
@@ -1219,6 +1337,11 @@ footer a {
   .backup-card .card-actions {
     flex-direction: row;
   }
+
+  .vehicle-note {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
 }
 
 @media (max-width: 560px) {
@@ -1334,6 +1457,15 @@ footer a {
     flex-basis: 100%;
   }
 
+  .section-actions {
+    justify-content: stretch;
+  }
+
+  .section-actions .button,
+  .parking-live-link {
+    width: 100%;
+  }
+
   .status-list article {
     grid-template-columns: 10px minmax(0, 1fr);
     gap: 10px;
@@ -1372,6 +1504,8 @@ footer a {
   .text-button,
   .hero__actions,
   .card-actions,
+  .section-actions,
+  .parking-live-link,
   footer a {
     display: none !important;
   }

@@ -1,8 +1,8 @@
 (() => {
   'use strict';
 
-  const VISIT_KEY = 'aichi-bakery-trip-20260922-visits-v1';
-  const CHECKLIST_KEY = 'aichi-bakery-trip-20260922-checklist-v1';
+  const VISIT_KEY = 'aichi-bakery-trip-20260922-visits-v2';
+  const CHECKLIST_KEY = 'aichi-bakery-trip-20260922-checklist-v2';
 
   const visitInputs = Array.from(document.querySelectorAll('[data-visit]'));
   const checklistInputs = Array.from(document.querySelectorAll('.checklist input[type="checkbox"]'));
@@ -64,7 +64,7 @@
       nextCard?.classList.add('is-current');
       nextCard?.setAttribute('aria-current', 'step');
     } else if (nextStop) {
-      nextStop.textContent = '本命5店 完了！';
+      nextStop.textContent = `本命${total}店 完了！`;
     }
 
     writeStoredArray(VISIT_KEY, completed.map((input) => input.dataset.visit));
@@ -84,7 +84,7 @@
   });
 
   resetButton?.addEventListener('click', () => {
-    if (!window.confirm('本命5店の訪問進捗をリセットしますか？')) return;
+    if (!window.confirm(`本命${visitInputs.length}店の訪問進捗をリセットしますか？`)) return;
     visitInputs.forEach((input) => {
       input.checked = false;
     });
